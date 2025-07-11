@@ -1,3 +1,5 @@
+% !TeX program = xelatex
+% \documentclass[a4paper,12pt]{report}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % Template per Elaborato di Laurea
@@ -29,12 +31,21 @@
     % linkcolor=blue,
     % filecolor=magenta,      
     % urlcolor=cyan,
-    pdftitle={Berardo-Cristiano-2024-2025},
+    pdftitle={Berardo\_Cristiano\_Laurea\_2024-2025},
     pdfpagemode=FullScreen,
     }
 \usepackage{svg}
 \usepackage{amsmath}
 \usepackage{booktabs}
+\usepackage{quoting}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{pdflscape}
+\usepackage{array}
+\usepackage{afterpage}
+
+% \usepackage{longtabu}
+\usepackage{multirow}
 %%%%%%%%%%%%%%
 % supporto lettere accentate
 %
@@ -46,12 +57,21 @@
 
 \usepackage[italian]{babel}
 
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+
 \begin{document}
 
   % nessuna numerazione
+  \blankpage
+  \blankpage
   \pagenumbering{gobble} 
   \input{pagina_iniziale}
-
+  \afterpage{\blankpage}
   \clearpage
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -62,6 +82,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \input{ringraziamenti}
+  \afterpage{\blankpage}
+  \clearpage
+  \input{citazione}
+   % \afterpage{\blankpage}
   \clearpage
   \pagestyle{plain} % nessuna intestazione e pie pagina con numero al centro
 
@@ -85,8 +109,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-    % indice
+
     \tableofcontents
+    \afterpage{\blankpage}
     \clearpage
     
     
@@ -112,6 +137,7 @@
       \titlespacing*{\subsection}{0pt}{0.10in}{0.02in}
       
       % sommario
+      \afterpage{\blankpage}
       \input{sommario}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -138,13 +164,9 @@
       \input{capitolo2}
       \input{capitolo3}
       \input{capitolo4}
-      
+      \input{capitolo5}
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[trim= 0cm 31cm 7.8cm 0cm, clip, width=0.97\linewidth]{img/aa.pdf}
-    \caption{Class Diagram}
-\end{figure}
+      
       
       
     \endgroup
@@ -189,7 +211,13 @@
     \titleformat{\chapter}
         {\normalfont\Huge\bfseries}{Allegato \thechapter}{1em}{}
     % sezione Allegati - opzionale
+    \addtocontents{toc}{\setcounter{tocdepth}{1}}
     \appendix
     \input{allegati}
+
+    \newpage
+    \blankpage
+    \blankpage
+    \blankpage
 
 \end{document}

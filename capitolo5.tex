@@ -1,0 +1,48 @@
+\afterpage{\blankpage}
+\newpage
+\afterpage{\blankpage}
+\chapter{Conclusioni e sviluppi futuri}
+
+% L'obiettivo di questo elaborato è stato quello di presentare una possibile architettura Smart Grid in ambito Cloud-Native e applicare a questa architettura proposta il framework STRIDE, utilizzato per modellare le minacce che il sistema, la Smart Grid, deve poter affrontare.
+
+% In questo elaborato infatti si è partiti con il definire cosa sia una Smart Grid con i suoi relativi componenti (Capitolo 1) per poi passare alla spiegazione del paradigma Cloud-Native (Capitolo 2) e di come questo oggi sia fondamentale per qualsiasi applicazione moderna arrivando a presentare il modello STRIDE e le sue quattro fasi (Capitolo 3) tutto questo per arrivare a definire il Data Flow Diagram della proposta di architettura e la ricerca delle minacce ha puntato a trovare le minacce meno ovvie questo per dare più valore all'architettura proposta.
+
+
+% Il panorama Smart Grid è complesso, pieno di problemi complessi soprattutto dal punto di vista della sicurezza informatica, pertanto, come abbiamo visto, serve un attenta analisi dei rischi e delle minacce ed avere sempre il piano di emergenza pronto da essere messo in campo, perché l'energia elettrica è fondamentale per qualsiasi Paese sviluppato in quanto un guasto o un attacco alla rete elettrica nazionale comporterebbe a gravissime perdite economiche per le imprese e grandi disagi anche per i cittadini.
+
+% In conclusione il focus di questo elaborato era principalmente sullo scovare possibili minacce in ambito Smart Grid dunque possibili sviluppi futuri sarebbero quelli di poter testare questa architettura e validare le minacce presentate. 
+
+
+% Questo lavoro di tesi ha esplorato le implicazioni di sicurezza derivanti dalla convergenza di due paradigmi tecnologici trasformativi: la Smart Grid e il Cloud-Native. Partendo da una disamina approfondita dell'ecosistema della rete elettrica intelligente, è stata proposta un'architettura software moderna, decentralizzata e resiliente, basata su una federazione di cluster Kubernetes. Il nucleo di questo elaborato è consistito nell'applicazione rigorosa e sistematica della metodologia del Threat Modeling, e in particolare del framework STRIDE, per analizzare proattivamente le vulnerabilità di tale architettura.
+% L'analisi condotta ha dimostrato come, a fronte degli indiscutibili vantaggi in termini di scalabilità, agilità ed efficienza, la transizione verso il Cloud-Native introduca vettori di attacco specifici che necessitano di un'attenta valutazione. Sono state identificate minacce significative in tutte le categorie STRIDE, che vanno dalla manipolazione di dati critici per la stabilità della rete (Tampering) alla negazione del servizio (Denial of Service) contro i componenti di controllo centralizzati, fino all'acquisizione illecita di privilegi (Elevation of Privilege) che potrebbe consentire a un attaccante di orchestrare disservizi su vasta scala.
+% Il contributo principale di questa tesi è duplice. In primo luogo, fornisce un modello architetturale concreto che illustra come le moderne tecnologie cloud possano essere impiegate per costruire l'infrastruttura IT di una Smart Grid. In secondo luogo, e più importante, dimostra l'efficacia del Threat Modeling come strumento indispensabile per integrare la sicurezza fin dalle prime fasi di progettazione ("Secure by Design"). L'analisi non si è limitata a un elenco di possibili attacchi, ma ha portato alla definizione di contromisure specifiche e contestualizzate, come l'adozione di policy di sicurezza granulari, la protezione dei canali di comunicazione inter-cluster e la validazione continua dell'integrità dei dati.
+
+
+% \paragraph{Limiti e Sviluppi Futuri}
+
+% Come ogni analisi, anche questo lavoro presenta dei limiti che aprono la strada a interessanti sviluppi futuri. L'ambito di analisi è stato volutamente circoscritto ai componenti software centralizzati e ai canali di comunicazione, escludendo deliberatamente la sicurezza fisica dei dispositivi sul campo (es. manomissione di DC e RTU) e delle infrastrutture di telecomunicazione. Inoltre, le contromisure proposte sono state definite a livello progettuale e la loro efficacia non è stata validata empiricamente.
+
+% \paragraph{}
+
+% In conclusione, la messa in sicurezza delle Smart Grid è un processo continuo e una sfida multidisciplinare. Questo lavoro si pone come un contributo in tale direzione, offrendo un approccio metodologico robusto per affrontare la complessità e garantire che le reti energetiche del futuro siano non solo intelligenti e sostenibili, ma anche e soprattutto sicure e resilienti.
+
+% \hline
+
+Questo lavoro di tesi ha affrontato le implicazioni di sicurezza derivanti dalla convergenza tra le reti elettriche di nuova generazione, le Smart Grid, e il paradigma architetturale \textit{Cloud-Native}. Partendo da questo presupposto, l'obiettivo del presente elaborato è stato duplice: in primo luogo, delineare un'architettura moderna e scalabile per una Smart Grid, basata su una federazione di cluster Kubernetes; in secondo luogo, applicare in modo sistematico il framework STRIDE di modellazione delle minacce  per analizzare proattivamente le vulnerabilità che un simile sistema si troverebbe ad affrontare.
+
+
+Il percorso di ricerca ha seguito una logica progressiva. Si è partiti da una definizione dei componenti fondamentali della Smart Grid (Capitolo 1) per poi analizzare il paradigma \textit{Cloud-Native} (Capitolo 2), evidenziandone il ruolo cruciale nelle moderne applicazioni distribuite. Successivamente, è stata introdotta la metodologia formale del \textit{Threat Modeling} con le sue quattro fasi (Capitolo 3). Questa preparazione metodologica è culminata nella definizione di un \textit{Data Flow Diagram} per l'architettura proposta e nella conseguente analisi delle minacce (Capitolo 4). Questa applicazione metodica si è rivelata cruciale per andare oltre le vulnerabilità più evidenti, facendo emergere minacce specifiche legate all'interazione tra i componenti \textit{cloud} e i dispositivi sul campo, che aggiungono un valore significativo all'analisi della sicurezza.
+
+
+L'analisi ha confermato che l'ecosistema Smart Grid presenta sfide di notevole complessità, soprattutto dal punto di vista della sicurezza informatica. Come evidenziato, è indispensabile un'attenta e continua analisi dei rischi, supportata da piani di mitigazione e risposta agli incidenti. La posta in gioco è altissima: l'energia elettrica è un'infrastruttura critica per qualsiasi nazione moderna, e un guasto o un attacco mirato alla rete nazionale comporterebbe gravissime perdite economiche per le imprese e profondi disagi per i cittadini.
+
+
+In sintesi, il contributo principale di questo elaborato risiede nell'applicazione di un approccio "\textit{Secure by Design}" a un'infrastruttura ciber-fisica complessa. Sono state identificate minacce concrete come attacchi di \textit{Tampering} ai flussi di dati, \textit{Denial of Service} contro i sistemi di controllo centrali e campagne coordinate di \textit{Elevation of Privilege} per manipolare la rete. Per ciascuna di esse, sono state proposte strategie di mitigazione adeguate al contesto \textit{Cloud-Native}, dimostrando come un'analisi proattiva sia fondamentale per costruire sistemi resilienti.
+
+
+\subsubsection{Limiti e Sviluppi Futuri}
+
+Il focus di questo elaborato è stato principalmente l'identificazione di minacce a livello architetturale. Di conseguenza, il naturale e più importante sviluppo futuro consisterebbe nel testare e validare empiricamente l'architettura proposta e le minacce identificate.
+
+
+In conclusione, la messa in sicurezza delle infrastrutture energetiche del futuro è un percorso iterativo e una sfida tecnologica costante. Questo lavoro si pone come un passo in tale direzione, fornendo una metodologia e un'analisi concreta per affrontare tale complessità con rigore e proattività.

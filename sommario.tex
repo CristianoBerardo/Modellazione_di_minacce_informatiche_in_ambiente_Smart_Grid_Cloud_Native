@@ -3,20 +3,41 @@
 
 \addcontentsline{toc}{chapter}{Sommario} % da aggiungere comunque all'indice
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nunc orci. Aliquam nec nisl vitae sapien pulvinar dictum quis non urna. Suspendisse at dui a erat aliquam vestibulum. Quisque ultrices pellentesque pellentesque. Pellentesque egestas quam sed blandit tempus. Sed congue nec risus posuere euismod. Maecenas ut lacus id mauris sagittis egestas a eu dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque at ultrices tellus. Ut eu purus eget sem iaculis ultricies sed non lorem. Curabitur gravida dui eget ex vestibulum venenatis. Phasellus gravida tellus velit, non eleifend justo lobortis eget.
+% Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nunc orci. Aliquam nec nisl vitae sapien pulvinar dictum quis non urna. Suspendisse at dui a erat aliquam vestibulum. Quisque ultrices pellentesque pellentesque. Pellentesque egestas quam sed blandit tempus. Sed congue nec risus posuere euismod. Maecenas ut lacus id mauris sagittis egestas a eu dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque at ultrices tellus. Ut eu purus eget sem iaculis ultricies sed non lorem. Curabitur gravida dui eget ex vestibulum venenatis. Phasellus gravida tellus velit, non eleifend justo lobortis eget.
 
 
-  Sommario è un breve riassunto del lavoro svolto dove si descrive l'obiettivo, l'oggetto della tesi, le 
-metodologie e le tecniche usate, i dati elaborati e la spiegazione delle conclusioni alle quali siete arrivati.  
+%   Sommario è un breve riassunto del lavoro svolto dove si descrive l'obiettivo, l'oggetto della tesi, le 
+% metodologie e le tecniche usate, i dati elaborati e la spiegazione delle conclusioni alle quali siete arrivati.  
 
-Il sommario dell’elaborato consiste al massimo di 3 pagine e deve contenere le seguenti informazioni:
-\begin{itemize}
-  \item contesto e motivazioni 
-  \item breve riassunto del problema affrontato
-  \item tecniche utilizzate e/o sviluppate
-  \item risultati raggiunti, sottolineando il contributo personale del laureando/a
-\end{itemize}
-
-
+% Il sommario dell’elaborato consiste al massimo di 3 pagine e deve contenere le seguenti informazioni:
+% \begin{itemize}
+%   \item contesto e motivazioni 
+%   \item breve riassunto del problema affrontato
+%   \item tecniche utilizzate e/o sviluppate
+%   \item risultati raggiunti, sottolineando il contributo personale del laureando/a
+% \end{itemize}
 
 
+
+La transizione globale verso un paradigma energetico sostenibile ha accelerato l'evoluzione delle reti elettriche tradizionali in Smart Grid. Questa trasformazione, caratterizzata dall'integrazione di fonti rinnovabili e dalla partecipazione attiva dei consumatori (\textit{prosumer}), impone requisiti di scalabilità, resilienza e capacità di elaborazione dati che le architetture IT convenzionali faticano a soddisfare. In risposta, le infrastrutture critiche stanno adottando sempre più il paradigma \textit{Cloud-Native}, che promette agilità, efficienza e robustezza attraverso tecnologie come la containerizzazione e l'orchestrazione con Kubernetes.
+
+
+Tuttavia, se da un lato l'adozione del \textit{cloud} offre vantaggi significativi, dall'altro introduce nuove e complesse superfici di attacco, esponendo le operazioni della rete energetica a minacce informatiche sofisticate. La sicurezza di tali sistemi diventa, quindi, una priorità non negoziabile.
+
+
+
+Il presente elaborato si pone l'obiettivo di analizzare e modellare sistematicamente le minacce informatiche in un'architettura Smart Grid progettata secondo i principi \textit{Cloud-Native}. Il lavoro si articola in tre fasi principali:
+
+
+\begin{enumerate}
+    \item \textbf{Analisi del Dominio:} Viene presentata un'analisi dettagliata dell'architettura della Smart Grid, dai componenti di produzione fino al dominio del consumatore e operazionale, evidenziando le tecnologie chiave come AMI, SCADA, EMS e DMS.
+    \item \textbf{Proposta Architetturale:} Viene definito un modello architetturale \textit{Cloud-Native} per la Smart Grid, basato su una federazione di cluster Kubernetes isolati (\textit{Trusted Boundaries}) che gestiscono i diversi domini funzionali (AMI, DMS, EMS), garantendo robustezza e autonomia operativa.
+    \item \textbf{Modellazione delle Minacce:} Viene applicata la metodologia formale del \textit{Threat Modeling}. Utilizzando un Diagramma di Flusso dei Dati (DFD) per rappresentare l'architettura, si applica il framework STRIDE (\textit{\textbf{S}poofing, \textbf{T}ampering, \textbf{R}epudiation, \textbf{I}nformation Disclosure, \textbf{D}enial of Service, \textbf{E}levation of Privilege}) per identificare, classificare e analizzare sistematicamente le potenziali minacce.
+\end{enumerate}
+
+
+
+L'analisi ha permesso di individuare vulnerabilità critiche, come attacchi di \textit{Tampering} ai dati provenienti dai PMU, \textit{Denial of Service} contro i sistemi SCADA ospitati nel \textit{cloud} e attacchi di \textit{Elevation of Privileg} e per il controllo coordinato di dispositivi remoti. Per ciascuna minaccia significativa, vengono proposte strategie di mitigazione e contromisure di sicurezza specifiche per il contesto \textit{Cloud-Native}, tra cui l'uso di database WORM, la segmentazione dei privilegi tramite RBAC e l'adozione di \textit{best practice} per la sicurezza dei container e dei cluster.
+
+
+Il contributo principale di questa tesi risiede nell'applicazione strutturata di una metodologia di sicurezza proattiva ("\textit{Secure by Desig}n") a un'infrastruttura critica moderna, fornendo un modello concreto per l'analisi dei rischi in sistemi ciber-fisici complessi e distribuiti.
