@@ -43,3 +43,22 @@ best practice per la sicurezza dei container e dei cluster.
 Il contributo principale di questa tesi risiede nell’applicazione strutturata di una metodologia di
 sicurezza proattiva (”_Secure by Design_”) a un’infrastruttura critica moderna, fornendo un modello
 concreto per l’analisi dei rischi in sistemi ciber-fisici complessi e distribuiti.
+
+# Il Dominio del Consumatore
+
+
+<img width="1302" height="511" alt="image" src="https://github.com/user-attachments/assets/84546e93-3dda-4d21-8f46-da48332930f1"/>
+
+
+# Il Dominio Operazionale
+
+
+<img width="1032" height="465" alt="image" src="https://github.com/user-attachments/assets/d5f16186-0ab1-4fc6-83bb-9b6cbfc64e22" />
+
+
+# L'Architettura Smart Grid Cloud-Native proposta
+
+
+<img width="741" height="599" alt="image" src="https://github.com/user-attachments/assets/bb1ca25a-c793-430d-b651-e46e35349324" />
+
+
